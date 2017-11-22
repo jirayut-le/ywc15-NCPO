@@ -27,7 +27,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
 #content {
@@ -56,24 +55,24 @@ export default {
 #background {
   background-position: center;
   background-color: #000;
-}
 
-#background::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  content: '';
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 75%,rgba(0,0,0,1) 100%);
-}
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 75%,rgba(0,0,0,1) 100%);
+  }
 
-#background video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -54%) scale(0.7);
-  filter: blur(10px);
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -54%) scale(0.7);
+    filter: blur(10px);
+  }
 }
 
 .next-section a {
@@ -91,54 +90,58 @@ export default {
   text-decoration: none;
   transition: opacity .3s;
   text-align: center;
-}
-.next-section a:hover {
-  opacity: .5;
+
+  &:hover {
+    opacity: .5;
+  }
 }
 
 #section01 a {
   padding-top: 60px;
-}
-#section01 a span {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 46px;
-  height: 46px;
-  margin-left: -23px;
-  border: 1px solid #fff;
-  border-radius: 100%;
-  box-sizing: border-box;
-  text-align: center;
-}
-#section01 a span::after {
-  position: absolute;
-  top: 50%;
-  /* left: 50%; */
-  content: '';
-  width: 16px;
-  height: 16px;
-  margin: -12px 0 0 -8px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  box-sizing: border-box;
-}
-#section01 a span::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  content: '';
-  width: 44px;
-  height: 44px;
-  box-shadow: 0 0 0 0 rgba(255,255,255,.1);
-  border-radius: 100%;
-  opacity: 0;
-  -webkit-animation: sdb03 3s infinite;
-  animation: sdb03 3s infinite;
-  box-sizing: border-box;
+  
+  span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 46px;
+    height: 46px;
+    margin-left: -23px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    box-sizing: border-box;
+    text-align: center;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      /* left: 50%; */
+      content: '';
+      width: 16px;
+      height: 16px;
+      margin: -12px 0 0 -8px;
+      border-left: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      box-sizing: border-box;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      content: '';
+      width: 44px;
+      height: 44px;
+      box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+      border-radius: 100%;
+      opacity: 0;
+      -webkit-animation: sdb03 3s infinite;
+      animation: sdb03 3s infinite;
+      box-sizing: border-box;
+    }
+  }
 }
 @-webkit-keyframes sdb03 {
   0% {
