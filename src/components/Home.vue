@@ -6,12 +6,15 @@
             <h5>{{ subtitle }}</h5>
         </div>
         <a href="#"><span></span>เริ่มต้น</a>
-      </div>
-      <div id="background">
-        <video playsinline autoplay muted loop>
-            <source src="../assets/video.mp4" type="video/mp4">
-        </video>
-      </div>
+    </div>
+    <div class="figure">
+      <img src="../assets/prayoot.png">
+    </div>
+    <div id="background">
+      <video playsinline autoplay muted loop>
+          <source src="../assets/video.mp4" type="video/mp4">
+      </video>
+    </div>
   </div>
 </template>
 
@@ -52,6 +55,14 @@ export default {
   
 }
 
+.figure {
+  background-position: center;
+  img {
+    position: absolute;
+    transform: scale(0.7) translate(-80%, -20%);
+  }
+}
+
 #background {
   background-position: center;
   background-color: #000;
@@ -67,6 +78,7 @@ export default {
   }
 
   video {
+    z-index: -3;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -80,7 +92,7 @@ export default {
   position: absolute;
   bottom: 0;
   left: 47%;
-  z-index: 2;
+  z-index: 4;
   display: inline-block;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
