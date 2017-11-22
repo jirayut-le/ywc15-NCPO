@@ -7,6 +7,11 @@
         </div>
         <a href="#"><span></span>เริ่มต้น</a>
       </div>
+      <div id="background">
+        <video playsinline autoplay muted loop>
+            <source src="../assets/video.mp4" type="video/mp4">
+        </video>
+      </div>
   </div>
 </template>
 
@@ -31,7 +36,7 @@ export default {
   top: 67%;
   left: 49%;
   z-index: 2;
-  color: #000;
+  color: #fff;
   font-family: 'Pattaya', sans-serif;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -48,6 +53,28 @@ export default {
   
 }
 
+#background {
+  background-position: center;
+  background-color: #000;
+}
+
+#background::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 75%,rgba(0,0,0,1) 100%);
+}
+
+#background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -54%) scale(0.7);
+  filter: blur(10px);
+}
 
 .next-section a {
   align-items: center;
