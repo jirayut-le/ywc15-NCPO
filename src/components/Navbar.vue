@@ -13,10 +13,11 @@
 <style lang="scss" scoped>
 
 .navbar {
-    position: relative;
+    position: fixed;
     z-index: 5;
     top: 0;
     margin: 50px;
+    width: 90%;
 
     .logo {
         float: left;
@@ -31,6 +32,7 @@
     .menu {
         float: right;
         font-size: 35px;
+        margin: -12px;
         color: #fff;
     }
 }
