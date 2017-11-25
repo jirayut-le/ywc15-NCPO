@@ -4,6 +4,7 @@
     <!-- <router-view/> -->
     <home></home>
     <about></about>
+    <policy></policy>
   </div>
 </template>
 
@@ -11,12 +12,14 @@
 import Navbar from '@/components/Navbar'
 import Home from '@/components/Home'
 import About from '@/components/About'
+import Policy from '@/components/Policy'
 export default {
   name: 'app',
   components : {
     Navbar,
     Home,
-    About
+    About,
+    Policy
   }
 }
 </script>
