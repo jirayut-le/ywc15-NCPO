@@ -1,4 +1,5 @@
 <template>
+<router-link :to="{ name: 'PolicyDetail'}">
 <div id="policy_card">
     <div class="card">
   <div class="card-image">
@@ -24,6 +25,7 @@
   </div>
 </div>
 </div>
+</router-link>
 </template>
 
 <script>
