@@ -1,7 +1,27 @@
 <template>
     <div id="policy_next">
-        text
-        
+        <div class="columns">
+            <div class="column">
+                <PolicyCard></PolicyCard>
+                <PolicyCard></PolicyCard>
+            </div>
+            <div class="column" id="down">
+                <PolicyCard></PolicyCard>
+                <PolicyCard></PolicyCard>
+            </div>
+            <div class="column">
+                <PolicyCard></PolicyCard>
+                <PolicyCard></PolicyCard>
+            </div>
+            <div class="column" id="down">
+                <PolicyCard></PolicyCard>
+                <PolicyCard></PolicyCard>
+            </div>
+            <div class="column">
+                <PolicyCard></PolicyCard>
+                <PolicyCard></PolicyCard>
+            </div>
+        </div>
         <div id="control_page">
             previous next
         </div>
