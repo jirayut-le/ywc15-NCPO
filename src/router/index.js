@@ -15,7 +15,7 @@ export default new Router({
     {
       path: '/next',
       name: 'PolicyNextPage',
-      compenent: PolicyNextPage
+      component: PolicyNextPage
     }
   ]
 })
