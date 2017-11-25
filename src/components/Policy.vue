@@ -23,7 +23,7 @@ export default {
                         { title: "เศรษฐกิจ", status: ""},
                         { title: "สาธารณะสุข", status: ""},
                         { title: "สิ่งแวดล้อม", status: ""},
-                        { title: "สังคม", status: ""}]
+                        { title: "การศึกษา", status: ""}]
         }
     }
 }
@@ -43,6 +43,9 @@ export default {
         a {
             font-size: 20px;
             font-weight: 300;
+            &:hover {
+                    background-color: rgba(0,0,0,0.03);
+            }
         }
 
         &.is-active {
