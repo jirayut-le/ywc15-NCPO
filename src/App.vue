@@ -3,6 +3,7 @@
     <navbar></navbar>
     <home></home>
     <about></about>
+    <member></member>
     <policy></policy>
   </div>
 </template>
@@ -12,12 +13,14 @@ import Navbar from '@/components/Navbar'
 import Home from '@/components/Home'
 import About from '@/components/About'
 import Policy from '@/components/Policy'
+import Member from '@/components/Member'
 export default {
   name: 'app',
   components : {
     Navbar,
     Home,
     About,
+    Member,
     Policy
   }
 }
