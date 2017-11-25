@@ -1,5 +1,5 @@
 <template>
-<div id="policy_card">
+<div id="policy_card_hi">
     <div class="card">
   <div class="card-image">
     <figure class="image is-4by3">
@@ -66,6 +66,14 @@
     color: #000;
     font-weight: 400;
     font-size: 30px;
+}
+
+#policy_card_hi {
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(0.97);
+    }
 }
 
 </style>
