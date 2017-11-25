@@ -10,6 +10,7 @@
                 </ul>
             </div>
         </div>
+        <router-view/>
     </div>
 </template>
 
@@ -31,7 +32,8 @@ export default {
 <style lang="scss" scoped>
 
 #policy {
-    padding: 50px 100px 50px 100px;
+    min-height: 100vh;
+    padding: 50px 100px 30px 100px;
 }
 
 .tabs {
@@ -55,14 +57,9 @@ export default {
     
 }
 
-
-
-
-
 h1 {
     font-weight: 500;
     font-size: 40px;
-    margin-bottom: 15px;
 }
 
 </style>
