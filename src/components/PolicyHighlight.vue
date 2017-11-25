@@ -21,7 +21,12 @@
 
     <div class="content has-text-left">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Phasellus nec iaculis mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Phasellus nec iaculis mauris.
+    </div>
+
+    <div class="catagories has-text-left">
+        ● Type
     </div>
   </div>
 </div>
@@ -38,6 +43,10 @@
     -webkit-box-shadow: none;
     box-shadow: none;
     background-color: transparent;
+}
+
+.content {
+    font-size: 14px;
 }
 
 #icon {
