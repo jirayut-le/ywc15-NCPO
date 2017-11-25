@@ -11,6 +11,11 @@ export default new Router({
       path: '/',
       name: 'PolicyAll',
       component: PolicyAll
+    },
+    {
+      path: '/next',
+      name: 'PolicyNextPage',
+      compenent: PolicyNextPage
     }
   ]
 })
