@@ -15,7 +15,7 @@
     </div>
 </template>
 
-<<script>
+<script>
 export default {
   data () {
       return {
@@ -58,10 +58,6 @@ export default {
             font-size: 15px;
         }
     }
-
-    
 }
-
-
 
 </style>
