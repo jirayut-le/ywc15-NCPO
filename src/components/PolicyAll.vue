@@ -2,7 +2,7 @@
     <div id="policy_all">
         <div class="columns">
             <div class="column is-two-fifths">
-                <PolicyCard></PolicyCard>
+                <PolicyHighlight></PolicyHighlight>
             </div>
             <div class="column">
                 <PolicyCard></PolicyCard>
@@ -23,10 +23,12 @@
 </template>
 
 <script>
+import PolicyHighlight from './PolicyHighlight'
 import PolicyCard from './PolicyCard'
 export default {
     components: {
-        PolicyCard
+        PolicyCard,
+        PolicyHighlight
     }
 }
 </script>
