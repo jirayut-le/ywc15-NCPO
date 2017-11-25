@@ -19,8 +19,8 @@
 </template>
 
 <script>
+
 export default {
-  name: 'HelloWorld',
   data () {
     return {
       title: 'คสช.',
@@ -55,9 +55,9 @@ export default {
 }
 
 .figure {
-  
   background-position: center;
   img {
+    z-index: 1;
     position: absolute;
     transform: scale(0.7) translate(-80%, -20%);
     animation: fadeinbottom 4s;
@@ -69,6 +69,7 @@ export default {
   background-color: #000;
 
   &::after {
+    z-index: 1;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -79,7 +80,7 @@ export default {
   }
 
   video {
-    z-index: -3;
+    z-index: 0;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -93,7 +94,7 @@ export default {
   position: absolute;
   bottom: 0;
   left: 47%;
-  z-index: 4;
+  z-index: 3;
   display: inline-block;
   transform: translate(0, -50%);
   color: #fff;
