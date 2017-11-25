@@ -1,9 +1,9 @@
 <template>
-    <div class="navbar">
-        <div class="logo">
+    <div id="navbar">
+        <div id="logo">
             <img src="../assets/Logo.png">
         </div>
-        <div class="menu">
+        <div id="menu">
             ☰
         </div>
     </div>
@@ -12,7 +12,7 @@
 
 <style lang="scss" scoped>
 
-.navbar {
+#navbar {
     position: fixed;
     z-index: 5;
     top: 0;
@@ -20,7 +20,7 @@
     width: 90%;
     animation: fadeintop 2.5s;
 
-    .logo {
+    #logo {
         float: left;
         img {
             max-width:50px;
@@ -30,7 +30,7 @@
         }
     }
 
-    .menu {
+    #menu {
         float: right;
         font-size: 35px;
         margin: -12px;

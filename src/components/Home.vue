@@ -1,20 +1,21 @@
 <template>
-  <div class="home">
+  <div id="home">
     <div class="next-section" id="section01">
-        <div id="content">
-            <h1>{{ title }}</h1>
-            <h5>{{ subtitle }}</h5>
-        </div>
-        <a href="#"><span></span>เริ่มต้น</a>
+      <div id="content">
+          <h1>{{ title }}</h1>
+          <h5>{{ subtitle }}</h5>
+      </div>
+      <a href="#"><span></span>เริ่มต้น</a>
     </div>
-    <div class="figure">
+    <div id="figure">
       <img src="../assets/prayoot.png">
     </div>
     <div id="background">
-      <video playsinline autoplay muted loop>
+      <video playsinline autoplay muted loop id="video_bg">
           <source src="../assets/video.mp4" type="video/mp4">
       </video>
     </div>
+  
   </div>
 </template>
 
@@ -31,6 +32,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+#home {
+  min-height: 100vh;
+}
 
 #content {
   position: absolute;
@@ -54,12 +59,19 @@ export default {
   
 }
 
-.figure {
+#figure {
   background-position: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right:0;
+  margin: auto;
+  
   img {
     z-index: 1;
-    position: absolute;
-    transform: scale(0.7) translate(-80%, -20%);
+    position: relative;
+    max-height: 85vh;
+    transform: translateX(-10%);
     animation: fadeinbottom 4s;
   }
 }
@@ -79,12 +91,12 @@ export default {
     background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 75%,rgba(0,0,0,1) 100%);
   }
 
-  video {
+  #video_bg {
     z-index: 0;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -54%) scale(0.7);
+    transform: translate(-50%, -54%);
     filter: blur(10px);
   }
 }
