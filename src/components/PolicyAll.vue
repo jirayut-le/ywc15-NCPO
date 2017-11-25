@@ -17,7 +17,14 @@
                 <PolicyCard></PolicyCard>
             </div>
         </div>
-        <router-link :to="{ name: 'PolicyNextPage'}">Next</router-link>
+        <a class="button is-light" disabled>
+            <div class="arrow-left">⌃</div>
+        </a>
+        <router-link :to="{ name: 'PolicyNextPage'}" class="next-btn">
+            <a class="button is-dark">
+                <div class="arrow-right">⌃</div>
+            </a>
+        </router-link>
     </div>
   
 </template>
@@ -35,6 +42,10 @@ export default {
 
 <style lang="scss" scoped>
 
+.columns {
+    margin-bottom: 0;
+}
+
 #policy_all {
     margin-top: 30px;
 }
@@ -43,4 +54,20 @@ export default {
     margin-top: 25px;
 }
 
+.button {
+    border-radius: 0;
+}
+
+.arrow {
+    &-left {
+        margin-left: 8px;
+        font-size: 25px;
+        transform: rotate(-90deg);
+    }
+    &-right {
+        margin-right: 8px;
+        font-size: 25px;
+        transform: rotate(90deg);
+    }
+}
 </style>

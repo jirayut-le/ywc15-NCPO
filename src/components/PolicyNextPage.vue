@@ -22,9 +22,16 @@
                 <PolicyCard></PolicyCard>
             </div>
         </div>
-        <div id="control_page">
-            previous next
-        </div>
+        <router-link :to="{ name: 'PolicyAll'}" class="next-btn">
+            <a class="button is-dark">
+                <div class="arrow-left">⌃</div>
+            </a>
+        </router-link>
+        <router-link :to="{ name: 'PolicyNextPage'}" class="next-btn">
+            <a class="button is-dark">
+                <div class="arrow-right">⌃</div>
+            </a>
+        </router-link>
     </div>
   
 </template>
@@ -48,4 +55,20 @@ export default {
     margin-top: 25px;
 }
 
+.columns {
+    margin-bottom: 0;
+}
+
+.arrow {
+    &-left {
+        margin-left: 8px;
+        font-size: 25px;
+        transform: rotate(-90deg);
+    }
+    &-right {
+        margin-right: 8px;
+        font-size: 25px;
+        transform: rotate(90deg);
+    }
+}
 </style>
