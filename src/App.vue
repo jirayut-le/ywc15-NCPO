@@ -22,6 +22,7 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Mitr:300,400,500,600,700');
 * {
   margin: 0;
   padding: 0;
