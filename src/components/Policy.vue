@@ -5,12 +5,14 @@
             <div class="tabs is-fullwidth">
                 <ul>
                     <li v-for="tab in tablist" :class="tab.status">
-                        <a>{{ tab.title }}</a>
+                        <router-link :to="{ name: 'PolicyAll'}">
+                        {{ tab.title }}
+                        </router-link>
                     </li>
                 </ul>
             </div>
         </div>
-        <router-view/>
+        <router-view class="fade-router"/>
     </div>
 </template>
 
@@ -21,7 +23,7 @@ export default {
             title: "นโยบาย",
             tablist: [{ title: "ทั้งหมด", status: "is-active" },
                         { title: "เศรษฐกิจ", status: ""},
-                        { title: "สาธารณะสุข", status: ""},
+                        { title: "สาธารณสุข", status: ""},
                         { title: "สิ่งแวดล้อม", status: ""},
                         { title: "การศึกษา", status: ""}]
         }
@@ -30,6 +32,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.fade-router {
+    animation: fade 0.5s ease-in-out;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+
+    }
+
+    to {
+        opacity: 1;
+    }
+    
+}
 
 #policy {
     min-height: 100vh;
@@ -43,8 +61,10 @@ export default {
         a {
             font-size: 20px;
             font-weight: 300;
+            transition: all 0.3s ease-in-out;
             &:hover {
-                    background-color: rgba(0,0,0,0.03);
+                background-color: rgba(0,0,0,0.03);
+                transform: scale(1.05);
             }
         }
 
