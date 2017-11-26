@@ -4,10 +4,10 @@
     <div class="card">
   <div class="card-image">
     <figure class="image is-4by3">
-      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+      <img src="../assets/teacher.jpg" alt="Placeholder image">
     </figure>
     <figure class="image is-48x48 is-pulled-right" id="icon">
-          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+          <img src="../assets/icon/edu.jpg" alt="Placeholder image">
     </figure>
   </div>
   <div class="card-content">
@@ -16,18 +16,16 @@
         
       </div>
       <div class="media-content">
-        <p class="has-text-left">Title</p>
+        <p class="has-text-left">{{ title }}</p>
       </div>
     <!-- </div> -->
 
     <div class="content has-text-left">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Phasellus nec iaculis mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Phasellus nec iaculis mauris.
+      {{ short_des }}
     </div>
 
     <div class="catagories has-text-left">
-        ● Type
+        ● {{ type }}
     </div>
   </div>
 </div>
@@ -36,10 +34,29 @@
 </template>
 
 <script>
+export default {
+    data() {
+        return {
+            title: "ปฏิรูปครู โดยเน้นการผลิตและพัฒนาครูคุณภาพ และให้คนเก่งคนดีมาเป็นครู",
+            short_des: "สมศ.สะท้อนวิกฤตทางการศึกษาไทยในระดับขั้นพื้นฐานว่ามีสถานศึกษาที่จัดการศึกษาได้มาตรฐานขั้นต่ำประมาณ 1 ใน 3 และอีกประมาณ 2 ใน 3 ไม่ได้มาตรฐาน",
+            type: "การศึกษา"
+        }
+    }
+}
     
 </script>
 
 <style lang="scss" scoped>
+
+@keyframes zoom {
+    from {
+        transform: scale(0.95);
+    }
+    to {
+        transform: scale(1);
+    }
+    
+}
 
 .card {
     -webkit-box-shadow: none;
@@ -49,6 +66,8 @@
 
 .content {
     font-size: 14px;
+    margin-bottom: 10px;
+    color: #959595;
 }
 
 #icon {
@@ -67,15 +86,21 @@
 .media-content {
     color: #000;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 25px;
+    margin-bottom: 10px;
 }
 
 #policy_card_hi {
+    animation: zoom 0.5s ease-in-out;
     transition: all 0.2s ease-in-out;
 
     &:hover {
       transform: scale(0.97);
     }
+}
+
+.catagories {
+    color: #f6a623;
 }
 
 </style>

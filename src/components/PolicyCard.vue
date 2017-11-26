@@ -4,7 +4,7 @@
     <div class="card">
   <div class="card-image">
     <figure class="image is-4by3">
-      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+      <img :src="getImg(img)" alt="Placeholder image">
     </figure>
   </div>
   <div class="card-content">
@@ -13,12 +13,12 @@
         
       </div>
       <div class="media-content">
-        <p class="has-text-left">Title</p>
+        <p class="has-text-left">{{title}}</p>
       </div>
       <div id="small-icon">
-        Type
+        {{ type }}
         <figure class="image is-24x24 is-pulled-right" >
-          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+          <img :src="getSrc(icon)" alt="Placeholder image">
       </figure>
       </div>
     </div>
@@ -29,6 +29,20 @@
 </template>
 
 <script>
+export default {
+  props: [ 'title', 'type', 'icon', 'img'],
+  methods: {
+    getSrc(name) {
+        var images = require.context('../assets/icon/', false, /\.jpg$/);
+        return images('./' + name + ".jpg")
+    },
+    getImg(name) {
+        var images = require.context('../assets/policy/', false, /\.jpg$/);
+        return images('./' + name + ".jpg")
+    },
+
+}
+}
     
 </script>
 
